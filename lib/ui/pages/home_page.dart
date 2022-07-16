@@ -14,7 +14,11 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.black87),
+      appBar: AppBar(
+        backgroundColor: Colors.black87,
+        title: Text('Rick and Morty'),
+        centerTitle: true,
+      ),
       body: BlocProvider(
         create: (context) => CharacterBloc(characterRepo: repository),
         child: Container(
