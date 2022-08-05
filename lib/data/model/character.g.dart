@@ -39,6 +39,7 @@ _$_Results _$$_ResultsFromJson(Map<String, dynamic> json) => _$_Results(
       status: json['status'] as String,
       gender: json['gender'] as String,
       image: json['image'] as String,
+      species: json['species'] as String,
     );
 
 Map<String, dynamic> _$$_ResultsToJson(_$_Results instance) =>
@@ -48,4 +49,5 @@ Map<String, dynamic> _$$_ResultsToJson(_$_Results instance) =>
       'status': instance.status,
       'gender': instance.gender,
       'image': instance.image,
+      'species': instance.species,
     };

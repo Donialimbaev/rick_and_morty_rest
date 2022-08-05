@@ -74,11 +74,13 @@ class CustomCard extends StatelessWidget {
                                           ? Colors.red
                                           : Colors.white,
                                 ),
-                                SizedBox(
-                                  width: 5,
-                                ),
+                                const SizedBox(width: 5),
                                 Text(
                                   result.status,
+                                  style: const TextStyle(color: Colors.white),
+                                ),
+                                Text(
+                                  result.species,
                                   style: const TextStyle(color: Colors.white),
                                 ),
                               ],
