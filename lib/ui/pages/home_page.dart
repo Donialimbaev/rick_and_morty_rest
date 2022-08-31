@@ -16,14 +16,14 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black87,
-        title: Text('Rick and Morty'),
+        title: const Text('Rick and Morty'),
         centerTitle: true,
       ),
       body: BlocProvider(
         create: (context) => CharacterBloc(characterRepo: repository),
         child: Container(
           decoration: const BoxDecoration(color: Colors.black87),
-          child: SearchPage(),
+          child: const SearchPage(),
         ),
       ),
     );

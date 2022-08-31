@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import '../../data/model/character.dart';
 
@@ -14,7 +13,7 @@ class CustomCard extends StatelessWidget {
       borderRadius: BorderRadius.circular(15),
       child: Container(
         height: MediaQuery.of(context).size.height / 7,
-        color: Color.fromRGBO(86, 86, 86, 0.8),
+        color: const Color.fromRGBO(86, 86, 86, 0.8),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -79,10 +78,10 @@ class CustomCard extends StatelessWidget {
                                   result.status,
                                   style: const TextStyle(color: Colors.white),
                                 ),
-                                Text(
-                                  result.species,
-                                  style: const TextStyle(color: Colors.white),
-                                ),
+                                // Text(
+                                //   result.species,
+                                //   style: const TextStyle(color: Colors.white),
+                                // ),
                               ],
                             ),
                           ],
