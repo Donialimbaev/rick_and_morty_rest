@@ -13,6 +13,8 @@ class CharacterRepo {
 
       var jsonResult = json.decode(response.body);
 
+      print(jsonResult);
+
       return Character.fromJson(jsonResult);
     } catch (error) {
       throw Exception(error.toString());

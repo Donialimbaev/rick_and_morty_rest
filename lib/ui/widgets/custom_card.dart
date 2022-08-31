@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import '../../data/model/character.dart';
 
@@ -16,17 +17,17 @@ class CustomCard extends StatelessWidget {
         color: const Color.fromRGBO(86, 86, 86, 0.8),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // CachedNetworkImage(
-            //   imageUrl:
-            //       'https://langformula.ru/wp-content/uploads/2019/04/house.jpg',
-            //   placeholder: (context, url) => const CircularProgressIndicator(
-            //     color: Colors.grey,
-            //   ),
-            //   errorWidget: (context, url, error) => Icon(Icons.error),
-            // ),
-            Image.network(
-              result.image,
+            Center(
+              child: CachedNetworkImage(
+                imageUrl: result.image,
+                placeholder: (context, url) => const CircularProgressIndicator(
+                  color: Colors.grey,
+                ),
+                errorWidget: (context, url, error) =>
+                    Center(child: Icon(Icons.error)),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.only(left: 20.0, bottom: 5),

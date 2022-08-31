@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:rick_and_morty_rest/bloc/character_bloc.dart';
 import 'package:rick_and_morty_rest/ui/widgets/custom_card.dart';
