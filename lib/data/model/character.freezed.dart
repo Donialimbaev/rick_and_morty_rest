@@ -389,7 +389,6 @@ mixin _$Results {
   String get status => throw _privateConstructorUsedError;
   String get gender => throw _privateConstructorUsedError;
   String get image => throw _privateConstructorUsedError;
-  String get species => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -400,13 +399,7 @@ mixin _$Results {
 abstract class $ResultsCopyWith<$Res> {
   factory $ResultsCopyWith(Results value, $Res Function(Results) then) =
       _$ResultsCopyWithImpl<$Res>;
-  $Res call(
-      {int id,
-      String name,
-      String status,
-      String gender,
-      String image,
-      String species});
+  $Res call({int id, String name, String status, String gender, String image});
 }
 
 /// @nodoc
@@ -424,7 +417,6 @@ class _$ResultsCopyWithImpl<$Res> implements $ResultsCopyWith<$Res> {
     Object? status = freezed,
     Object? gender = freezed,
     Object? image = freezed,
-    Object? species = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -447,10 +439,6 @@ class _$ResultsCopyWithImpl<$Res> implements $ResultsCopyWith<$Res> {
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
-      species: species == freezed
-          ? _value.species
-          : species // ignore: cast_nullable_to_non_nullable
-              as String,
     ));
   }
 }
@@ -461,13 +449,7 @@ abstract class _$$_ResultsCopyWith<$Res> implements $ResultsCopyWith<$Res> {
           _$_Results value, $Res Function(_$_Results) then) =
       __$$_ResultsCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {int id,
-      String name,
-      String status,
-      String gender,
-      String image,
-      String species});
+  $Res call({int id, String name, String status, String gender, String image});
 }
 
 /// @nodoc
@@ -486,7 +468,6 @@ class __$$_ResultsCopyWithImpl<$Res> extends _$ResultsCopyWithImpl<$Res>
     Object? status = freezed,
     Object? gender = freezed,
     Object? image = freezed,
-    Object? species = freezed,
   }) {
     return _then(_$_Results(
       id: id == freezed
@@ -509,10 +490,6 @@ class __$$_ResultsCopyWithImpl<$Res> extends _$ResultsCopyWithImpl<$Res>
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
-      species: species == freezed
-          ? _value.species
-          : species // ignore: cast_nullable_to_non_nullable
-              as String,
     ));
   }
 }
@@ -525,8 +502,7 @@ class _$_Results with DiagnosticableTreeMixin implements _Results {
       required this.name,
       required this.status,
       required this.gender,
-      required this.image,
-      required this.species});
+      required this.image});
 
   factory _$_Results.fromJson(Map<String, dynamic> json) =>
       _$$_ResultsFromJson(json);
@@ -541,12 +517,10 @@ class _$_Results with DiagnosticableTreeMixin implements _Results {
   final String gender;
   @override
   final String image;
-  @override
-  final String species;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Results(id: $id, name: $name, status: $status, gender: $gender, image: $image, species: $species)';
+    return 'Results(id: $id, name: $name, status: $status, gender: $gender, image: $image)';
   }
 
   @override
@@ -558,8 +532,7 @@ class _$_Results with DiagnosticableTreeMixin implements _Results {
       ..add(DiagnosticsProperty('name', name))
       ..add(DiagnosticsProperty('status', status))
       ..add(DiagnosticsProperty('gender', gender))
-      ..add(DiagnosticsProperty('image', image))
-      ..add(DiagnosticsProperty('species', species));
+      ..add(DiagnosticsProperty('image', image));
   }
 
   @override
@@ -571,8 +544,7 @@ class _$_Results with DiagnosticableTreeMixin implements _Results {
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality().equals(other.gender, gender) &&
-            const DeepCollectionEquality().equals(other.image, image) &&
-            const DeepCollectionEquality().equals(other.species, species));
+            const DeepCollectionEquality().equals(other.image, image));
   }
 
   @JsonKey(ignore: true)
@@ -583,8 +555,7 @@ class _$_Results with DiagnosticableTreeMixin implements _Results {
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(status),
       const DeepCollectionEquality().hash(gender),
-      const DeepCollectionEquality().hash(image),
-      const DeepCollectionEquality().hash(species));
+      const DeepCollectionEquality().hash(image));
 
   @JsonKey(ignore: true)
   @override
@@ -603,8 +574,7 @@ abstract class _Results implements Results {
       required final String name,
       required final String status,
       required final String gender,
-      required final String image,
-      required final String species}) = _$_Results;
+      required final String image}) = _$_Results;
 
   factory _Results.fromJson(Map<String, dynamic> json) = _$_Results.fromJson;
 
@@ -618,8 +588,6 @@ abstract class _Results implements Results {
   String get gender;
   @override
   String get image;
-  @override
-  String get species;
   @override
   @JsonKey(ignore: true)
   _$$_ResultsCopyWith<_$_Results> get copyWith =>
